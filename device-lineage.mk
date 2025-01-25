@@ -84,3 +84,8 @@ PRODUCT_PACKAGES += \
 
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
+
+## Extras/Add-ons
+# ViPER4AndroidFX
+$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+
