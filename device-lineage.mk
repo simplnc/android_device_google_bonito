@@ -55,7 +55,7 @@ PRODUCT_PACKAGES += \
 
 # CHRE
 PRODUCT_PACKAGES += \
-    chre
+    chre_daemon_msm
 
 # Configstore
 PRODUCT_PACKAGES += \
