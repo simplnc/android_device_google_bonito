@@ -77,6 +77,12 @@ PRODUCT_SHIPPING_API_LEVEL := 28
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+ifneq ($(wildcard $(LOCAL_PATH)/bootanimation.zip),)
+# Boot animation
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+endif
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.recovery.hardware.rc:recovery/root/init.recovery.$(PRODUCT_PLATFORM).rc \
     $(LOCAL_PATH)/init.hardware.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_PLATFORM).rc \
