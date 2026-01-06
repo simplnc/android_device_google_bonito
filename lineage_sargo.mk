@@ -21,9 +21,11 @@ PRODUCT_NAME := lineage_sargo
 TARGET_SCREEN_HEIGHT := 2220
 TARGET_SCREEN_WIDTH := 1080
 
+# Fix signature verification error for unofficial builds
+# Change from release-keys to test-keys to match actual signing keys used
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="sargo-user 12 SP2A.220505.008 8782922 release-keys" \
-    BuildFingerprint=google/sargo/sargo:12/SP2A.220505.008/8782922:user/release-keys \
+    BuildDesc="sargo-user 12 SP2A.220505.008 8782922 test-keys" \
+    BuildFingerprint=google/sargo/sargo:12/SP2A.220505.008/8782922:user/test-keys \
     DeviceProduct=sargo
 
 $(call inherit-product, vendor/google/sargo/sargo-vendor.mk)
