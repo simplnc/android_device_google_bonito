@@ -35,5 +35,9 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SEPOLICY_DIRS += device/google/bonito/sepolicy-lineage/dynamic
 BOARD_SEPOLICY_DIRS += device/google/bonito/sepolicy-lineage/vendor
 
+# Dex preopt optimization for better performance and space efficiency
+WITH_DEXPREOPT := true
+DEX_PREOPT_DEFAULT := nostripping
+
 # Verified Boot
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
